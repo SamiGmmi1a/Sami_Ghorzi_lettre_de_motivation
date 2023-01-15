@@ -7,16 +7,23 @@
     <title>Lettre de Motivation</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+
 </head>
 
 
 <body>
 
     <header>
-        <h1>Sami Ghorzi</h1>
-        <h2>Adresse : 37 Avenue Clémenceau ; 25200 Montbéliard</h2>
-        <h2>Téléphone : 06 62 17 16 20</h2>
-        <h2>Mail : samighorzi2a@gmail.com</h2>
+        <div class="left">
+            <h1>Sami Ghorzi</h1>
+        </div>
+
+        <div class="right">
+            <h2>Adresse : 37 Avenue Clémenceau ; 25200 Montbéliard</h2>
+            <h2>Téléphone : 06 62 17 16 20</h2>
+            <h2>Mail : samighorzi2a@gmail.com</h2>
+        </div>
     </header>
     
     <main>
@@ -56,7 +63,69 @@
         <div class="network">
         </div>
 
-        <h2>Mes projets réalisés</h2>
+        <h2>Projets réalisés</h2>
+
+        
+        <div x-data="{ open: false }">
+            <button @click="open = ! open">X'plore</button>
+            
+            <div
+            x-show="open"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-90"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90"
+            ><ul>
+                <li>
+                    <p>Hello 👋</p>
+                    <a href="https://x-plore.samighorzi.fr/fr/">Lien vers le site</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+
+        <div x-data="{ open: false }">
+            <button @click="open = ! open">Fondation Cartier</button>
+            
+            <div
+            x-show="open"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-90"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90"
+            ><ul>
+                <li>
+                    <p>Hello 👋</p>
+                    <a href="https://fondation-cartier.samighorzi.fr/fr/">Lien vers le site</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+
+        timeline
+
+        <div class="timeline">
+
+            <div class="container">
+                <div class="line">
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                    <div class="line"></div>
+                </div>
+
+    <div class="cards">
+        <div class="card">
+            <img src="" alt="">
+            <h4></h4>
+        </div>
+    </div>
+    
+            </div>
+        </div>
 
         </div> 
     </main>
